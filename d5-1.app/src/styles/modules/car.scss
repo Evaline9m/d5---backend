@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+section .cart{
+    background-color: #efefef;
+    
+    footer{
+        height: 0.6rem;
+        @include border($border-color:#e5e5e5);
+        @include flexbox();
+        line-height: 0.5rem;
+        .check{  
+            @include flexbox();
+            height: 100%;
+            width: 0.7rem;
+            margin-left: 0.1rem;
+            span{
+                padding-left: 0.1rem;
+            }
+        }
+        .pay{
+            @include flex();
+            span{
+                &:nth-child(1){
+                    font-size: .12rem;
+                }
+                &:nth-child(2){
+                    font-size: .16rem;
+                    color: #ff623b;
+                }
+                &:nth-child(3){
+                    color: #b9b9b9;
+                    font-size: 0.1rem;
+                }
+                &:nth-child(4){
+                    color: #b9b9b9;
+                    font-size: 0.1rem;
+                }
+            }
+        }
+        .btn{
+            width: 1rem;
+            background: #b08042;
+            color: #fff;
+            line-height: 0.6rem;
+            @include align();
+        }
+       
+    }
+    
+    
+    
+     .check{
+        width:.45rem;
+        text-align:center;
+        line-height:0.5rem;
+        height: 0.5rem;
+        i{
+            font-size: 0.23rem;
+            color: #b08042;
+        }
+        i.uncheck{
+            color: #bababa;
+        }
+     }
+}

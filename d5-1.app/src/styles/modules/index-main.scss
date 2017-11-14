@@ -1,0 +1,393 @@
+$index-text-color:#b5b5b5;
+.index-main {
+    @include border(0 0 .12rem 0)
+    .index-header {
+        height: .44rem;
+        background: #2A2A2A;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999999;
+        
+        div {
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+        }
+        .index-header-site {
+            @include flex(3);
+            i {
+                margin: 0 4px;
+            }
+            .yo-ico,
+            span {
+                font-size: .1rem;
+            }
+        }
+        .index-header-search {
+            @include flex(6);
+            background: #747474;
+            height: .3rem;
+            @include border-radius(20px);
+            i {
+                @include flex(1);
+                text-align: center;
+            }
+            input {
+                @include flex(5);
+                border: 0;
+                background: transparent;
+                height: .28rem;
+            }
+        }
+        .index-header-glance {
+            @include flex(1);
+            font-size: .2rem;
+        }
+        color: #fff;
+    }
+}
+
+.content{
+            padding: .44rem 0 0 0;
+        }
+/** banner **/
+
+.banner {
+    height: 2.33rem;
+    overflow: hidden;
+}
+
+.banner-img {
+    //height: 2.33rem;
+    width: 100%;
+}
+
+
+/***分区导航 **/
+
+.area-nav {
+    //height: 2.08rem;
+    width: 100%;
+    @include border(0 0 .09rem 0);
+    ul {
+        height: 1.32rem;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        @include border(0 0 1px 0);
+        li {
+            @include flex(1);
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(center);
+            @include align-items(center);
+            img {
+                width: .65rem;
+                //height: .71rem;
+            }
+            span {
+                font-size: .12rem;
+            }
+        }
+    }
+    .youhui {
+        height: .74rem;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        div {
+            @include justify-content(center);
+            @include align-items(center);
+            text-align: center;
+        }
+        .left {
+            @include flex(1);
+            @include border(0 1px 0 0);
+            img {
+                width: .34rem;
+                //height: .34rem;
+            }
+        }
+        .right {
+            @include flex(6);
+            img {
+                width: 2.4rem;
+                //height: .5rem;
+            }
+        }
+    }
+}
+
+
+/** 限时抢购 **/
+
+.flash-sale {
+    text-align: center;
+    height: 3.42rem;
+    width: 100%;
+    //background: #ccc;
+    padding: .2rem 0 0 0;
+    > p:nth-of-type(1) {
+        font-weight: 800;
+        font-size: .14rem;
+        line-height: .2rem;
+    }
+    > p:nth-of-type(2) {
+        font-size: .11rem;
+        line-height: .21rem;
+        color:#b5b5b5;
+    }
+    .carousel {
+        @include flexbox();
+        @include flex-direction();
+        //@include justify-content(center);
+        @include align-items(center);
+        padding: .15rem 0 0 .05rem;
+        overflow: hidden;
+        // width: 200%; 
+        dl {
+            padding: 0 0 0 .09rem;
+            dt {
+                padding: 0 0 .1rem 0;
+                img {
+                    width: .54rem;
+                    height: .19rem;
+                }
+            }
+            dd:nth-of-type(1) {
+                img {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                }
+            }
+            dd:nth-of-type(2) {
+                @include flexbox();
+                @include align-items(center);
+                line-height: .37rem;
+                font-size: 12px;
+                span {
+                    @include flex(1);
+                    text-align: left;
+                }
+                i {
+                    @include flex(1);
+                    text-align: right;
+                    color: #b5b5b5;
+                    text-decoration:line-through
+                }
+            }
+            dd:nth-of-type(3) {
+                @include ellipsis($width:1.4rem);
+                font-size: 12px;
+                color: #b5b5b5;
+                line-height: 12px;
+            }
+            dd:nth-of-type(4) {
+                height: .46rem;
+                @include flexbox();
+                @include justify-content(center);
+                @include align-items(center);
+                span {
+                    display: block;
+                    line-height: .2rem;
+                    font-size: 12px;
+                    width: .7rem;
+                    @include border($border-width: 1px, $border-color: #ae7f47, $radius:.2rem);
+                    @include border-radius(.2rem);
+                    color: #ae7f47;
+                }
+            }
+        }
+    }
+}
+
+/** 推荐品牌  **/
+.recommended-brand{
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-content(center);
+    @include border($border-width: .09rem 0 0 0,$border-color:#b5b5b5);
+    h3{
+        line-height: .47rem;
+        text-align: center;
+        font-size: 14px;
+        @include border(0 0 1px 0);
+    }
+    .brands{
+        @include flexbox();
+        @include flex-direction();
+        @include justify-content(center);
+        @include align-content(center);
+        div{
+            @include flex();
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(center);
+            @include align-content(center);
+            color: #2c2c2c;
+            font-size: 12px;
+            img{
+                width: .45rem;
+            }
+        }
+        .left{
+            @include align-items(center);
+            @include border(0 1px 0 0);
+            dt{
+                line-height: .76rem;
+                text-align: center;
+            }
+            dd{
+                img{
+                    width: .78rem;
+                }
+            }
+        }
+        .center,.right{
+            dl{
+                @include flex();
+                @include flexbox();
+                @include flex-direction(column);
+                padding: .07rem 0 0 0;
+                width: 100%;
+                height: .89rem;
+                
+                dt{
+                    @include flex(2);
+                    
+                }
+                dd{
+                    @include flex(1);
+                    line-height: .33rem;
+                }
+                dd,dt{
+                     vertical-align: middle;
+                     text-align: center;
+                     width: 100%;
+                }
+            }
+        }
+        .center{
+            dl:nth-of-type(1){
+                @include border(0 1px 1px 0);
+            }
+                           
+            dl:nth-of-type(2){
+                dt{
+                    @include flexbox();
+                    @include justify-content(center);
+                    //@include align-content(center);
+                    padding: .17rem 0 0 0;
+                    img{
+                        width: .90rem;
+                        height: .23rem;
+                    }
+                }
+                @include border(0 1px 0 0);
+            }
+        }
+        .right{
+            dl:nth-of-type(1){
+                @include border(0 0 1px 0);
+            }
+        }
+    }
+}
+/** D5牛排**/
+   
+.d5-steak{
+    @include border(.09rem 0 0 0);
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-content(center);
+    
+    width: 100%;
+    .header{
+        height: .56rem;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-content(center);
+        width: 100%;
+        .logo,.left{
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(center);
+            @include align-content(center);
+        }
+        .logo{
+            @include flex();
+            padding: 0 0 0 .14rem;
+            img{
+                width: .27rem;
+            }
+        }
+        .left{
+            @include flex(6);
+            p:nth-of-type(1){
+                font-size: .14rem;
+            }
+            p:nth-of-type(2){
+                color: $index-text-color;
+                font-size: .1rem;
+            }
+        }
+    }
+    .middle{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .carousel {
+        height: 2.2rem;
+        @include flexbox();
+        //@include justify-content(center);
+        @include align-items(center);
+        padding: .25rem 0 .21rem .02rem;
+        overflow: hidden;
+        // width: 200%; 
+        dl {
+            padding: 0 0 0 .09rem;
+            dt{
+                img {
+                    width: 1.4rem;
+                }
+            }
+            dd{
+                line-height: .22rem;
+                text-align: center;
+            }
+            dd:nth-of-type(1) {
+                @include ellipsis($width:1.4rem);
+                font-size: 12px;
+                color: #b5b5b5;
+                line-height: 12px;
+                padding: .28rem 0 0 0;
+            }
+            dd:nth-of-type(2) {
+                font-size: 12px;
+                em:nth-of-type(1),span {
+                    color: #ff5402;
+                    text-align: left;
+                }
+                em:nth-of-type(2){
+                    text-decoration:line-through;
+                    padding: 0 0 0 .2rem;
+                }
+                i {
+                    padding: 0 0 0 0px;
+                    font-size: 12px;
+                    color: #b5b5b5;
+                    text-decoration:line-through
+                }
+            }
+        }
+    }
+} 

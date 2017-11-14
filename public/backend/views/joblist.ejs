@@ -1,0 +1,21 @@
+<% if (joblist.length > 0) { %>
+  <% for (var i = 0; i < joblist.length; i++) {%>
+    <tr jobid="<%= joblist[i]._id %>">
+      <td><%= i+1 %></td>
+      <td><%= joblist[i].name %></td>
+      <td><img src="<%= 'upload/' + joblist[i].companyLogo %>" alt="" width="50" height="50"></td>
+      <td><%= joblist[i].nprice %></td>
+      <td><%= joblist[i].oprice %></td>
+      <td>
+        <button class="btn btn-primary" data-tag="update">修改</button>
+        <button class="btn btn-danger" data-tag="delete">删除</button>
+      </td>
+    </tr>
+<%
+  }
+} else {
+%>
+<tr>
+  <td colspan="8"> 暂无数据 </td>
+</tr>
+<% } %>

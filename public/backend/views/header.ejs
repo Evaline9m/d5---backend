@@ -1,0 +1,19 @@
+<row class="col-md-12">
+		<div class="col-md-10 col-md-offset-1">
+			<h1> D5 后台管理系统 <small> 欢迎来到D5 </small></h1>
+			<div class="col-md-3 col-md-offset-9">
+				 <% if (!isLogin) { %>
+					<span data-toggle="modal" data-target="#signin-modal">登录</span>
+		  			<span data-toggle="modal" data-target="#signup-modal">注册</span>
+				<% } else { %>
+		  			<span data-toggle="modal">你好</span>
+					<span data-toggle="modal"><%= username %></span>
+		  			<span data-toggle="modal" id="js-logout"><a href="#">注销</a></span>
+		  		<% } %>
+			</div>
+		</div>
+	</row>
+
+
+
+

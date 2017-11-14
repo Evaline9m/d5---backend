@@ -1,0 +1,204 @@
+@charset "UTF-8";
+.buyLimit{
+    overflow-y: scroll;
+    .limit-section{
+        @include flexbox();
+        @include flex-direction(column);
+        width: 100%;
+    }
+    
+    .buyLimit-header{
+        p{
+            position: absolute;
+            right:.11rem ;
+            .yo-ico{
+                font-size: .18rem;
+                color: #888888;
+                margin: 0 .03rem;
+            }
+        }
+    }
+    .buyLimit-banner{
+        padding: .1rem 0;
+        width: 100%;
+        height: 2.3;
+        overflow: hidden;
+        .banner-items{
+            height: 2.1rem;
+            width: 3.25rem;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .limit-time{
+        @include flexbox();
+        width: 100%;
+        height: .46rem;
+        @include border($border-width:1px 0 0 0,$border-color:#e5e5e5);
+        p{
+           
+            line-height: .46rem;
+            &:nth-of-type(1){
+                 @include flex(1);
+                font-size: .14rem;
+                .yo-ico{
+                    color: #d0b69d;
+                    font-size: .18rem;
+                    margin: 0 .09rem 0 .14rem;
+                }
+            }
+            &:nth-of-type(2){
+                @include flex(2);
+                @include flexbox();
+                @include justify-content(flex-end);
+               
+                padding: 0 .1rem 0 0  ;
+                font-size: .06rem;
+                color: #e0e0e0;
+                span:nth-of-type(2){
+                    text-align: right;
+                    i{
+                        background: #cbb391;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+   
+       
+  .list-container {
+    @include flex();
+    overflow-y: scroll;
+    //@include flex-direction(column);
+    width: 100%;
+    .list {
+      height: 100%;
+      ul {
+        width: 100%;
+        li {
+          border-top: .1rem solid #f5f5f5;
+          width: 100%;
+          dl {
+            height: 1.74rem;
+            width: 100%;
+            @include flexbox();
+            dt {
+              &::after{
+                  content: ".";
+                  width: 0;
+                  height: 100%;
+                  display: inline-block;
+                  vertical-align: middle;
+              }
+              width: 1.85rem;
+              height: 100%;
+              img {
+                height: 1.05rem;
+                width: 98%;
+                display: inline-block;
+                vertical-align: middle;
+              }
+              padding: .1rem;
+            }
+            dd{
+              @include flex();
+              padding-top: .27rem;
+              p {
+                line-height: 20px;
+                &:first-child {
+                  font-size: .15rem;
+                  line-height: .15rem;
+                }
+                &:nth-child(2) {
+                  font-size: 12px;
+                  @include ellipsis(null, 1);
+                  color: #c2c2c2;
+                  line-height: .34rem;
+                }
+                &:nth-of-type(3){
+                    color: #fe5400;
+                    padding-bottom: .15rem;
+                }
+                &:last-child {
+                  background: #cfb292;
+                  width: .9rem;
+                  height: .31rem;
+                  text-align: center;
+                  @include border-radius(.1rem);
+                  a{
+                      width: 100%;
+                      height: 100%;
+                      color: #fff;
+                      line-height: .31rem;
+                      
+                  }
+                }
+              }
+            }
+           
+          }
+        }
+      }
+    }
+  }
+   
+    
+}
+
+%pos-list {
+  .list-container {
+    @include flex();
+    overflow-y: scroll;
+    width: 100%;
+    .list {
+      height: 100%;
+      ul {
+        width: 100%;
+        @include border(0 0 1px 0);
+        li {
+          @include border(1px 0 0 0);
+          width: 100%;
+          dl {
+            @include flexbox();
+            dt {
+              width: .8rem;
+              img {
+                width: 100%;
+              }
+              padding: .1rem;
+            }
+            dd:nth-child(2) {
+              @include flex();
+              padding-top: .1rem;
+              p {
+                line-height: 20px;
+                &:first-child {
+                  font-size: 16px;
+                }
+                &:nth-child(2) {
+                  font-size: 12px;
+                  @include ellipsis(null, 1);
+                }
+                &:last-child {
+                  font-size: 12px;
+                  color: #888;
+                }
+              }
+            }
+            dd:last-child {
+              width: .8rem;
+              line-height: .8rem;
+              text-align: right;
+              padding-right: .1rem;
+              font-size: 16px;
+              color: $base-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

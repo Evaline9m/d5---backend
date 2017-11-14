@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+.m-index {
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+
+  header {
+    height: .44rem;
+    background:#fff;
+    font-size: .18rem;
+    color: #000;
+    text-align: center;
+    line-height: .44rem;
+    @include border($border-width: 0 0 1px 0, $border-color:#e5e5e5 );
+  }
+  .common-header{
+      width:100%;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      position: relative;
+      i{
+          position: absolute;
+          left:.3rem;
+          bottom: .035rem;
+      }
+  }
+  section {
+    background: #fff;
+    @include flex();
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  footer {
+      background: #fff;
+        .footer-nav {
+            height: 100%;
+            @include border(1px 0 0 0);
+            @include flexbox();
+            li {
+                @include flex();
+                @include flexbox();
+                @include justify-content(center);
+                @include align-items(center);
+                @include flex-direction(column);
+                b {
+                    font-weight: 100;
+                    font-size: .1rem;
+                    color: #c2cfcc;
+                }
+                i {
+                    font-weight: 100;
+                    font-size: .18rem;
+                    color: #c2cfcc;
+                }
+                &.active b,
+                &.active i {
+                    color: #C49C6B;
+                }
+                &:nth-of-type(3) {
+                    position: relative;
+                    .AR-btn {
+                        width: .65rem;
+                        height: .65rem;
+                        bottom: .05rem;
+                        font-size: 0.3rem;
+                        background: #fff;
+                        @include border($border-width: 1px 0 0 0, $radius:.65rem);
+                        @include border-radius(50%);
+                        position: absolute;
+                        z-index: 1000;
+                        i {
+                            width: .5rem;
+                            height: .5rem;
+                            background: #C49C6B;
+                            color: #fff;
+                            text-align: center;
+                            @include border-radius(50%);
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            line-height: .5rem;
+                            font-size: .3rem;
+                        }
+                    }
+                }
+                &:nth-of-type(4) {
+                    position: relative;
+                    b>span{
+                            position: absolute;
+                            top: .04rem;
+                            right: .21rem;
+                            width: .14rem;
+                            height: .14rem;
+                            background: red;
+                            color: #fff;
+                            text-align: center;
+                            line-height: .14rem;
+                            font-size: .06rem;
+                            border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}

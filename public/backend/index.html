@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=`device-width`, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D5牛排</title>
+  <link rel="stylesheet" href="/backend/styles/base/bootstrap.css">
+</head>
+<style>
+	body,html{height: 100%;width: 100%;}
+</style>
+<body>
+	
+	<row class=' col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1'>
+		<div class="alert alert-danger" role="alert" style="position: fixed; z-index: 10000;width: 65%;display: none;" id='alert-danger1'>账号已经被注册过了 , 请换一个吧</div>
+	</row>
+	
+	<row class=' col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1'>
+		<div class="alert alert-info" role="alert" style="position: fixed; z-index: 10000;width: 65%;display: none;" id='alert-info1'>注册成功</div>
+	</row>
+	
+	<row class=' col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1'>
+		<div class="alert alert-info" role="alert" style="position: fixed; z-index: 10000;width: 65%;display: none;" id='alert-danger2'>用户名密码不匹配</div>
+	</row>
+	
+	<row class=' col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1'>
+		<div class="alert alert-info" role="alert" style="position: fixed; z-index: 10000;width: 65%;display: none;" id='alert-info2'>登陆成功</div>
+	</row>
+	
+	<div id="head" style="height: 100px; margin: 40px 0;"></div>
+	<section></section>
+	
+  <script src="/backend/scripts/base/jquery.js"></script>
+  <script src="/backend/scripts/base/bootstrap.js"></script>
+  <script src="/backend/scripts/base/ejs.js"></script>
+  <script src="/backend/scripts/common/signUp.js"></script>
+  <script src="/backend/scripts/common/signIn.js"></script>
+  <script src="/backend/scripts/common/header.js"></script>
+  <script src="/backend/scripts/pages/jobs/list.js"></script>
+  <script src="/backend/scripts/common/section.js"></script>
+  <script src="/backend/scripts/pages/index/index.js"></script>
+  
+  <script src="/backend/scripts/pages/jobs/pagination.js"></script>
+  <!--<script src="/backend/scripts/pages/jobs/index.js"></script>-->
+  
+  <script>
+    var page = new Page('index');
+  </script>
+</body>
+</html>

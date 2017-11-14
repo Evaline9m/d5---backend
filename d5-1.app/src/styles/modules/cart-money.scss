@@ -1,0 +1,55 @@
+.money{
+    height: 1.63rem;
+    background: #fff;
+    margin:0.1rem 0;
+    padding: 0 0.12rem;
+    .top{
+        height: 0.74rem;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 0.14rem;
+        p{
+            height: 0.37rem;
+            line-height:0.37rem;
+            display: flex;
+            span{  
+                
+                &:nth-child(1){
+                    flex: 1;
+                }
+                &:nth-child(2){
+                    width: 0.5rem;
+                }
+            }
+        }
+    }
+    .bottom{
+        font-size: 0.14rem;
+        div:nth-child(1){
+            height: 0.44rem;
+            line-height:0.44rem;
+            display: flex;
+            span{
+                &:nth-child(1){
+                    flex: 1;
+                }
+                &#red{
+                    color: #ff4644;
+                }
+                &:last-child{
+                    width: 0.5rem;
+                }
+            }
+        }
+        div:nth-child(2){
+            display:flex;
+            height: 0.44rem;
+            line-height:0.44rem;
+            p{
+                flex: 1;
+            }
+            span{
+                width: 0.9rem;
+            }
+        }
+    }
+}

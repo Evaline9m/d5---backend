@@ -1,0 +1,91 @@
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+$base-color: #ae7f47;
+$color-c2:#878787;
+$color-2d:#2d2d2d;
+@font-face {
+  font-family: 'yofont';
+  src: url('../assets/images/iconfont/iconfont.woff') format('woff'), url('../assets/images/iconfont/iconfont.ttf') format('truetype')
+}
+
+%pos-list {
+  .list-container {
+    @include flex();
+    overflow-y: scroll;
+    width: 100%;
+    .list {
+      height: 100%;
+      ul {
+        width: 100%;
+        @include border(0 0 1px 0);
+        li {
+          @include border(1px 0 0 0);
+          width: 100%;
+          dl {
+            @include flexbox();
+            dt {
+              width: .8rem;
+              img {
+                width: 100%;
+              }
+              padding: .1rem;
+            }
+            dd:nth-child(2) {
+              @include flex();
+              padding-top: .1rem;
+              p {
+                line-height: 20px;
+                &:first-child {
+                  font-size: 16px;
+                }
+                &:nth-child(2) {
+                  font-size: 12px;
+                  @include ellipsis(null, 1);
+                }
+                &:last-child {
+                  font-size: 12px;
+                  color: #888;
+                }
+              }
+            }
+            dd:last-child {
+              width: .8rem;
+              line-height: .8rem;
+              text-align: right;
+              padding-right: .1rem;
+              font-size: 16px;
+              color: $base-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+%givespan{
+    overflow: hidden;
+    color:#f15a51;
+    font-size: 9px;
+    height: .18rem;
+    line-height: .18rem;
+    @include border(1px,#f15a51,$radius:3px);
+    
+    span:nth-child(1){
+      color:#fff;
+      padding:0 .03rem;
+      background: #f25a55;
+      display: inline-block;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    span:nth-child(2){
+      padding:0 .04rem;
+    }
+}
+
+

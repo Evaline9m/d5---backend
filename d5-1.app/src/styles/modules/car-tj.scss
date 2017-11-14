@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+.cart-tj{
+    margin-top: 0.1rem;
+    background: #f5f5f5;
+    padding: 0 .1rem;
+    overflow: hidden;
+    .title{
+        @include flexbox();
+        height: .46rem;
+        div{
+            height: 100%;
+            width: 1.36rem;
+            &:nth-child(1),&:nth-child(3){
+                @include border($border-width: 0 0 1px 0, $border-color: #dedede); 
+                height: .22rem;
+            }
+            &:nth-child(2){
+                border: none;
+                color: #bbb;
+                @flex();
+                line-height: 0.46rem;
+                text-align: center;
+            }
+        }
+        
+        
+    }
+    .tjList{
+        li{
+            background: #fff;
+            float: left;
+            width: 48%;
+            margin-bottom: 0.1rem;
+            height: 2.32rem;
+            position: relative;
+            &:nth-child(2n-1){
+//              margin-right: 0.1rem;
+            }
+            &:nth-child(2n){
+//              margin-left: 0.1rem;
+                float: right;
+            }
+            i.like{
+                position: absolute;
+                font-size: .2rem;
+                top: .11rem;
+                left: .11rem;
+                color: #ff8a88;
+            }
+            .img{
+                height:1.66rem;
+                width: 100%;
+                @include align();
+                img{
+                    width: 80%;
+                }
+            }
+            .word{
+                @include flexbox() ;
+                .word-left{
+                    @include flex();
+                    padding-left: 0.1rem;
+                    p{
+                        &:nth-child(1){
+                            font-size: .12rem;
+                            line-height: 0.24rem;
+                            height: 0.24rem;
+                            @include ellipsis();
+                        }
+                        &:nth-child(2){
+                            font-size: .12rem;
+                            color: #fc5507;
+                        }
+                    }
+                    del{
+                        text-decoration:line-through;
+                        color: #c4c4c4;
+                        font-size: .11rem;
+                        color: #a3a3a3;
+                    }
+                }
+                .word-right{
+                    width: .47rem;
+                    height: 0.66rem;
+                    @include align();
+                    i{
+                        color: #cfa460;
+                        font-size: 0.28rem;
+                    }
+                    i.pink{
+                        color: #ff8a88;
+                    }
+                }
+            }
+        }
+        
+    }
+}
